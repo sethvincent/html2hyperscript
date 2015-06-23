@@ -9,5 +9,5 @@ if (!fileName) {
     throw new Error('supply input HTML file as first argument');
 }
 
-process.stdout.write(convert(fs.readFileSync(fileName)));
+process.stdout.write(convert('module.exports = ' + fs.readFileSync(fileName)));
 process.stdout.write("\n");
